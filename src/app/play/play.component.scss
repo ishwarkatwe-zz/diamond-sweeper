@@ -1,36 +1,98 @@
-* {
-  box-sizing: border-box;
+@import "./../../styles";
+
+.title {
+  text-align: center;
+  color: $white;
 }
 
-$board_width: 550px;
-$white: #fff;
-$grey: #ccc;
+.game__dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.game__board {
-  .game__board__rows {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: $board_width;
+.game {
+  margin: 10px;
+  padding: 10px;
+  background: $white;
+  .game__board {
+    .game__board__rows {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: $board_width;
 
-    .game__board__cols {
-      flex: 1;
-      background: #ccc;
-      border: 2px solid $grey;
-      height: calc(550px / 8);
+      .game__board__cols {
+        flex: 1;
+        background: #ccc;
+        border: 2px solid $red;
+        height: calc(#{$board_width} / 8);
 
-      &.question {
-        background: url("./../../assets/question.png");
-        background-repeat: no-repeat;
-        background-size: cover;
+        &.question {
+          background: url("./../../assets/question.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          border: 2px solid $grey;
+        }
+
+        &.diamond {
+          background: url("./../../assets/diamond.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-color: $green;
+        }
+
+        &.arrow__right {
+          background: url("./../../assets/arrow.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-color: $orange;
+        }
+
+        &.arrow__left {
+          background: url("./../../assets/arrow.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          transform: rotate(180deg);
+          border-color: $orange;
+        }
+
       }
-
-      &.diamond {
-        background: url("./../../assets/diamond.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
     }
   }
+}
+
+.actions {
+  flex-basis: 200px;
+  text-align: center;
+
+  .clicks {
+    margin: 20px 0px;
+    color: $white;
+    small {
+      font-size: 16px;
+      line-height: 20px;
+      display: block;
+    }
+    label {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+
+  text-align: center;
+
+  > button {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0px;
+    cursor: pointer;
+    border: 1px solid $white;
+    &:hover {
+      background: $theme_color;
+      color: white;
+    }
+  }
+
 }

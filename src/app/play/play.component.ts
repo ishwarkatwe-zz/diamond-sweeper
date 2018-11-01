@@ -7,15 +7,18 @@ import {Component, OnInit} from '@angular/core';
 })
 export class PlayComponent implements OnInit {
   limit: number;
-  score: number;
+  diamondCounter: number;
   clicks: number;
+  maxClicks: number;
   objData: Array<object> = [];
+  score: number;
 
   constructor() {
     // matrix 8*8
     this.limit = 8;
-    this.score = 0;
+    this.diamondCounter = 0;
     this.clicks = 0;
+    this.maxClicks = 64;
   }
 
   ngOnInit() {
@@ -24,7 +27,7 @@ export class PlayComponent implements OnInit {
 
   reset() {
     this.objData = [];
-    this.score = 0;
+    this.diamondCounter = 0;
     this.clicks = 0;
     this.init();
   }
@@ -47,12 +50,16 @@ export class PlayComponent implements OnInit {
   }
 
   onClick(node) {
-    node['clicked'] = true;
-    // node['question'] = false;
-    // node['diamond'] = true;
-    this.clicks = this.clicks + 1;
-    if (node['diamond'] == true) {
-      this.score = this.score + 1;
+    if (node['clicked'] == false) {
+      node['clicked'] = true;
+      // node['question'] = false;
+      // node['diamond'] = true;
+      this.clicks = this.clicks + 1;
+      if (node['diamond'] == true) {
+        this.diamondCounter = this.diamondCounter + 1;
+      }
+
+      this.score = (this.maxClicks - this.clicks);
     }
   }
 

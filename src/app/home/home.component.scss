@@ -1,0 +1,30 @@
+@import './../../styles';
+
+.home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  .home__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    > h1 {
+      color: #ffffff;
+    }
+
+    >button {
+      margin: 2em 0px;
+      padding: 15px 20px;
+      font-size: 18px;
+      width: 200px;
+      border: 1px solid $white;
+      cursor: pointer;
+      &:hover {
+        background: $theme_color;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "./../../styles";
+
+.game__over {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+
+  .game__over__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 350px;
+    background: $theme_color;
+
+    > h2 {
+      text-align: center;
+      color: #fff;
+    }
+
+    > h4 {
+      text-align: center;
+      color: #fff;
+    }
+
+    ul {
+      position: relative;
+      margin: 0px;
+      padding: 0px;
+      li {
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        padding: 2em 0px;
+
+        button {
+          width: 100px;
+          padding: 10px;
+          text-align: center;
+          margin: 10px 0px;
+          cursor: pointer;
+          border: 1px solid $white;
+          &:hover {
+            background: $theme_color;
+            color: white;
+          }
+        }
+      }
+    }
+
+  }
+}

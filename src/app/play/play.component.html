@@ -1,22 +1,40 @@
-<div>
-  Score : {{score}}
-  Clicks : {{clicks}}
+<h1 class="title">Diamond Sweeper</h1>
 
-  <button (click)="reset()">Reset</button>
-</div>
-
-<div class="game__board" *ngFor="let row of objData; let i = index">
-  <div class="game__board__rows">
-    <div *ngFor="let item of row let j = index"
-         class="game__board__cols"
-         [ngClass]="{
+<section class="game__dashboard">
+  <section class="game">
+    <div class="game__board" *ngFor="let row of objData; let i = index">
+      <div class="game__board__rows">
+        <div *ngFor="let item of row let j = index"
+             class="game__board__cols"
+             [ngClass]="{
           question:item['clicked']==false,
           diamond:(item['clicked']==true && item['diamond']==true),
           blank:(item['clicked']==true && item['blank']==true)
          }"
-         (click)="onClick(item)"
-    >
-      <!--{{i}},{{j}}-->
+             (click)="onClick(item)"
+        >
+          <!--{{i}},{{j}}-->
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
+
+  <section class="actions">
+    <div class="clicks">
+      <small>Clicks</small>
+      <label>{{clicks}}</label>
+    </div>
+
+    <div class="clicks">
+      <small>Diamonds Sweeped</small>
+      <label>{{diamondCounter}}</label>
+    </div>
+
+    <button routerLink="/">Home</button>
+    <br>
+    <button (click)="reset()">Reset</button>
+  </section>
+
+</section>
+
+<app-game-over [score]="score" *ngIf="diamondCounter == limit" (playAgain)="reset()"></app-game-over>

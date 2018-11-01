@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+$board_width: 35vw;
+$white: #fff;
+$grey: #ccc;
+$green: #8bc34a;
+$red: #f44336;
+$orange: orange;
+$theme_color : #2E3651;
+
+
+html, body {
+  background: #2E3651;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,body {
+  padding: 0px;
+  margin: 0px;
+}

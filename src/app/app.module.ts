@@ -7,12 +7,14 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 import { PlayComponent } from './play/play.component';
+import { GameOverComponent } from './game-over/game-over.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PlayComponent
+    PlayComponent,
+    GameOverComponent
   ],
   imports: [
     BrowserModule,
