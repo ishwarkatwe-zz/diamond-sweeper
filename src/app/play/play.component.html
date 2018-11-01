@@ -1,0 +1,22 @@
+<div>
+  Score : {{score}}
+  Clicks : {{clicks}}
+
+  <button (click)="reset()">Reset</button>
+</div>
+
+<div class="game__board" *ngFor="let row of objData; let i = index">
+  <div class="game__board__rows">
+    <div *ngFor="let item of row let j = index"
+         class="game__board__cols"
+         [ngClass]="{
+          question:item['clicked']==false,
+          diamond:(item['clicked']==true && item['diamond']==true),
+          blank:(item['clicked']==true && item['blank']==true)
+         }"
+         (click)="onClick(item)"
+    >
+      <!--{{i}},{{j}}-->
+    </div>
+  </div>
+</div>

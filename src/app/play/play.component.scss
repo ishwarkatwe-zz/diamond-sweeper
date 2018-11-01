@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+$board_width: 550px;
+$white: #fff;
+$grey: #ccc;
+
+.game__board {
+  .game__board__rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: $board_width;
+
+    .game__board__cols {
+      flex: 1;
+      background: #ccc;
+      border: 2px solid $grey;
+      height: calc(550px / 8);
+
+      &.question {
+        background: url("./../../assets/question.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      &.diamond {
+        background: url("./../../assets/diamond.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+    }
+  }
+}
