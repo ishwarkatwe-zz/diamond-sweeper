@@ -27,36 +27,42 @@
         background: #ccc;
         border: 2px solid $red;
         height: calc(#{$board_width} / 8);
+        background-repeat: no-repeat !important;
+        background-size: 80% !important;
+        background-position: center !important;
 
         &.question {
           background: url("./../../assets/question.png");
-          background-repeat: no-repeat;
-          background-size: cover;
           border: 2px solid $grey;
-        }
-
-        &.diamond {
-          background: url("./../../assets/diamond.png");
-          background-repeat: no-repeat;
-          background-size: cover;
-          border-color: $green;
         }
 
         &.arrow__right {
           background: url("./../../assets/arrow.png");
-          background-repeat: no-repeat;
-          background-size: cover;
           border-color: $orange;
         }
 
         &.arrow__left {
           background: url("./../../assets/arrow.png");
-          background-repeat: no-repeat;
-          background-size: cover;
           transform: rotate(180deg);
           border-color: $orange;
         }
 
+        &.arrow__top {
+          background: url("./../../assets/arrow.png");
+          border-color: $orange;
+          transform: rotate(-90deg);
+        }
+
+        &.arrow__bottom {
+          background: url("./../../assets/arrow.png");
+          transform: rotate(90deg);
+          border-color: $orange;
+        }
+
+        &.diamond {
+          background: url("./../../assets/diamond.png");
+          border-color: $green;
+        }
       }
     }
   }
@@ -97,9 +103,8 @@
 
 }
 
-
 @include respond-to(xs) {
-  $board_width : 80vw;
+  $board_width: 80vw;
 
   .game__dashboard {
     flex-direction: column;

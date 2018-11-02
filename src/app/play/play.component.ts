@@ -12,6 +12,7 @@ export class PlayComponent implements OnInit {
   maxClicks: number;
   objData: Array<object> = [];
   score: number;
+  lastClick: Object;
 
   constructor() {
     // matrix 8*8
@@ -44,6 +45,8 @@ export class PlayComponent implements OnInit {
           'diamond': (randomNumber == j) ? true : false
         });
         if ((randomNumber == j)) {
+
+          //Log for testing
           console.log(i, j);
         }
       }
@@ -59,7 +62,49 @@ export class PlayComponent implements OnInit {
       if (node['diamond'] == true) {
         this.diamondCounter = this.diamondCounter + 1;
       }
-      console.log(node);
+
+      this.checkPredictor(node);
+    }
+  }
+
+  checkPredictor(node) {
+    let {x, y} = node;
+    y--;
+    x--;
+
+    //Click last click to remove predictor
+    if (this.lastClick) {
+      const {x, y} = this.lastClick;
+      this.objData[y][x]['predictor'] = false;
+      this.objData[y][x]['predictor_direction'] = '';
+    }
+
+    //Log last click
+    this.lastClick = {x, y};
+
+    //Next and Prev nodes
+    let xNext = x + 1;
+    let xPrev = x - 1;
+
+    let yNext = y + 1;
+    let yPrev = y - 1;
+
+    if (this.objData[y] && this.objData[y][xNext] && this.objData[y][xNext]['diamond'] == true && this.objData[y][xNext]['clicked'] == false) {
+      //predictor to right
+      node['predictor'] = true;
+      node['predictor_direction'] = 'arrow__right';
+    } else if (this.objData[y] && this.objData[y][xPrev] && this.objData[y][xPrev]['diamond'] == true && this.objData[y][xPrev]['clicked'] == false) {
+      //predictor to left
+      node['predictor'] = true;
+      node['predictor_direction'] = 'arrow__left';
+    } else if (this.objData[yNext] && this.objData[yNext][x] && this.objData[yNext][x]['diamond'] == true && this.objData[yNext][x]['clicked'] == false) {
+      //predictor to bottom
+      node['predictor'] = true;
+      node['predictor_direction'] = 'arrow__bottom';
+    } else if (this.objData[yNext] && this.objData[yPrev][x] && this.objData[yPrev][x]['diamond'] == true && this.objData[yPrev][x]['clicked'] == false) {
+      //predictor to top
+      node['predictor'] = true;
+      node['predictor_direction'] = 'arrow__top';
     }
   }
 

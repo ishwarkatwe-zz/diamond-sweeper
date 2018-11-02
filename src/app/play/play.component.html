@@ -7,9 +7,12 @@
         <div *ngFor="let item of row let j = index"
              class="game__board__cols"
              [ngClass]="{
+          arrow__right:(item['clicked']==true && item['predictor']==true && item['predictor_direction']=='arrow__right'),
+          arrow__left:(item['clicked']==true && item['predictor']==true && item['predictor_direction']=='arrow__left'),
+          arrow__bottom:(item['clicked']==true && item['predictor']==true && item['predictor_direction']=='arrow__bottom'),
+          arrow__top:(item['clicked']==true && item['predictor']==true && item['predictor_direction']=='arrow__top'),
           question:item['clicked']==false,
-          diamond:(item['clicked']==true && item['diamond']==true),
-          blank:(item['clicked']==true && item['blank']==true)
+          diamond:(item['clicked']==true && item['diamond']==true)
          }"
              (click)="onClick(item)"
         >
@@ -35,5 +38,4 @@
   </section>
 
 </section>
-
 <app-game-over [score]="score" *ngIf="diamondCounter == limit" (playAgain)="reset()"></app-game-over>
