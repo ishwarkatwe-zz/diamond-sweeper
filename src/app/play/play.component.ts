@@ -38,6 +38,8 @@ export class PlayComponent implements OnInit {
       const row = [];
       for (let j = 1; j <= this.limit; j++) {
         row.push({
+          'x': j,
+          'y': i,
           'clicked': false,
           'diamond': (randomNumber == j) ? true : false
         });
@@ -52,14 +54,12 @@ export class PlayComponent implements OnInit {
   onClick(node) {
     if (node['clicked'] == false) {
       node['clicked'] = true;
-      // node['question'] = false;
-      // node['diamond'] = true;
       this.clicks = this.clicks + 1;
+      this.score = (this.maxClicks - this.clicks);
       if (node['diamond'] == true) {
         this.diamondCounter = this.diamondCounter + 1;
       }
-
-      this.score = (this.maxClicks - this.clicks);
+      console.log(node);
     }
   }
 
