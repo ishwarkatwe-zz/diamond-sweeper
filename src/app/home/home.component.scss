@@ -13,6 +13,14 @@
     > h1 {
       color: #ffffff;
     }
+    figure {
+      margin: 5px;
+
+      text-align: center;
+      img {background: $white;
+        width: 150px;
+      }
+    }
 
     >button {
       margin: 2em 0px;

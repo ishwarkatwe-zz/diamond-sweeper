@@ -86,7 +86,7 @@
     width: 100px;
     padding: 10px;
     text-align: center;
-    margin: 10px 0px;
+    margin: 10px 10px;
     cursor: pointer;
     border: 1px solid $white;
     &:hover {
@@ -95,4 +95,28 @@
     }
   }
 
+}
+
+
+@include respond-to(xs) {
+  $board_width : 80vw;
+
+  .game__dashboard {
+    flex-direction: column;
+  }
+
+  .game {
+    .game__board {
+      .game__board__rows {
+        width: $board_width;
+        .game__board__cols {
+          height: calc(#{$board_width} / 8);
+        }
+      }
+    }
+
+    .actions {
+      flex-basis: 100px;
+    }
+  }
 }

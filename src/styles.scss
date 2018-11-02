@@ -8,6 +8,16 @@ $red: #fa8f87;
 $orange: orange;
 $theme_color: #2E3651;
 
+//utils
+@import "utils/_snippets";
+@import "utils/_shadow";
+@import "utils/_animations";
+@import "utils/_rotate";
+@import "utils/_calc";
+@import "utils/_columns";
+@import "utils/_transform";
+@import "utils/_linearGradient";
+
 html, body {
   background: #2E3651;
 }
