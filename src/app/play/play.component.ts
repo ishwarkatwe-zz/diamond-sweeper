@@ -38,10 +38,12 @@ export class PlayComponent implements OnInit {
   resume() {
     const data = Object.assign({}, this.objStoreData);
 
+    //Restore session from local storage
     this.objData = data['objData'];
     this.score = data['score'];
     this.clicks = data['clicks'];
     this.diamondCounter = data['diamondCounter'];
+    this.lastClick = data['lastClick'];
 
     this.objStoreData = [];
   }
@@ -98,7 +100,8 @@ export class PlayComponent implements OnInit {
       objData: this.objData,
       score: this.score,
       clicks: this.clicks,
-      diamondCounter: this.diamondCounter
+      diamondCounter: this.diamondCounter,
+      lastClick: this.lastClick
     };
     localStorage.setItem('actions', JSON.stringify(logger));
   }
