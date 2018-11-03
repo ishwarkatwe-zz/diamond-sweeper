@@ -28,8 +28,8 @@ Run online at (https://ishwarkatwe.github.io/diamond-sweeper/index.html).
 ## Progressive Web App ( Mobile Responsive View )
 <br>
 <img src="https://raw.githubusercontent.com/ishwarkatwe/diamond-sweeper/master/src/assets/snap/mobile_1.png" width="300" />
-<img src="https://raw.githubusercontent.com/ishwarkatwe/diamond-sweeper/master/src/assets/snap/mobile_1.png" width="300" />
-<img src="https://raw.githubusercontent.com/ishwarkatwe/diamond-sweeper/master/src/assets/snap/mobile_1.png" width="300" />
+<img src="https://raw.githubusercontent.com/ishwarkatwe/diamond-sweeper/master/src/assets/snap/mobile_2.png" width="300" />
+<img src="https://raw.githubusercontent.com/ishwarkatwe/diamond-sweeper/master/src/assets/snap/mobile_3.png" width="300" />
 
 
 ## Further help
