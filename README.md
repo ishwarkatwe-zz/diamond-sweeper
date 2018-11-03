@@ -2,8 +2,8 @@
 
 This project represents a game of diamond sweeper
 
-1 . Node 8*8
-2 . Provides hint on nearest nodes with arrows.
+1 . Node 8*8 \n
+2 . Provides hint on nearest nodes with arrows. <br>
 3 . State management with local storage.
 4 . Can you used offline from the benifit of PWA app.
 
