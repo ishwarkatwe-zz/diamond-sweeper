@@ -22,6 +22,15 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run online at (https://ishwarkatwe.github.io/diamond-sweeper/index.html).
 
+## Snap-short Web View ( Desktop )
+
+![alt tag](https://github.com/ishwarkatwe/diamond-sweeper/blob/master/src/assets/snap/desktop.png?raw=true)
+
+## Progressive Web App ( Mobile Responsive View )
+
+![alt tag](https://github.com/ishwarkatwe/diamond-sweeper/blob/master/src/assets/snap/mobile_1.png?raw=true)
+![alt tag](https://github.com/ishwarkatwe/diamond-sweeper/blob/master/src/assets/snap/mobile_2.png?raw=true)
+![alt tag](https://github.com/ishwarkatwe/diamond-sweeper/blob/master/src/assets/snap/mobile_3.png?raw=true)
 
 ## Further help
 

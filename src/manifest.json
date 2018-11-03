@@ -4,8 +4,8 @@
   "theme_color": "#2E3651",
   "background_color": "#fafafa",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "https://ishwarkatwe.github.io/diamond-sweeper/home",
+  "scope": "https://ishwarkatwe.github.io/diamond-sweeper/index.html",
+  "start_url": "https://ishwarkatwe.github.io/diamond-sweeper/index.html",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
