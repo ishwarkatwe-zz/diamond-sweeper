@@ -17,8 +17,10 @@
       margin: 5px;
 
       text-align: center;
-      img {background: $white;
+      img {
+        background: $white;
         width: 150px;
+        border-radius: 10%;
       }
     }
 

@@ -1,5 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 
+interface Position {
+  x: number;
+  y: number;
+}
+
 @Component({
   selector: 'app-play',
   templateUrl: './play.component.html',
@@ -12,7 +17,7 @@ export class PlayComponent implements OnInit {
   maxClicks: number;
   objData: Array<object> = [];
   score: number;
-  lastClick: Object;
+  lastClick: Position;
 
   constructor() {
     // matrix 8*8
@@ -60,10 +65,12 @@ export class PlayComponent implements OnInit {
       this.clicks = this.clicks + 1;
       this.score = (this.maxClicks - this.clicks);
       if (node['diamond'] == true) {
+        node['predictor'] = false;
+        node['predictor_direction'] = '';
         this.diamondCounter = this.diamondCounter + 1;
+      } else {
+        this.checkPredictor(node);
       }
-
-      this.checkPredictor(node);
     }
   }
 
@@ -75,6 +82,7 @@ export class PlayComponent implements OnInit {
     //Click last click to remove predictor
     if (this.lastClick) {
       const {x, y} = this.lastClick;
+
       this.objData[y][x]['predictor'] = false;
       this.objData[y][x]['predictor_direction'] = '';
     }

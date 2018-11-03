@@ -27,6 +27,16 @@
       color: #fff;
     }
 
+    >figure {
+      margin: 2px;
+      text-align: center;
+      img {
+        width: 50px;
+        border-radius: 10%;
+        background: $white;
+      }
+    }
+
     ul {
       position: relative;
       margin: 0px;
