@@ -1,7 +1,7 @@
 {
   "name": "diamond-sweeper",
-  "short_name": "diamond-sweeper",
-  "theme_color": "#1976d2",
+  "short_name": "DS",
+  "theme_color": "#2E3651",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",

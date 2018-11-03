@@ -16,6 +16,7 @@ export class PlayComponent implements OnInit {
   clicks: number;
   maxClicks: number;
   objData: Array<object> = [];
+  objStoreData: object;
   score: number;
   lastClick: Position;
 
@@ -28,13 +29,29 @@ export class PlayComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (localStorage.getItem('actions')) {
+      this.objStoreData = JSON.parse(localStorage.getItem('actions'));
+    }
     this.init();
+  }
+
+  resume() {
+    const data = Object.assign({}, this.objStoreData);
+
+    this.objData = data['objData'];
+    this.score = data['score'];
+    this.clicks = data['clicks'];
+    this.diamondCounter = data['diamondCounter'];
+
+    this.objStoreData = [];
   }
 
   reset() {
     this.objData = [];
     this.diamondCounter = 0;
     this.clicks = 0;
+    this.objStoreData = [];
+    localStorage.setItem('actions', '');
     this.init();
   }
 
@@ -71,7 +88,19 @@ export class PlayComponent implements OnInit {
       } else {
         this.checkPredictor(node);
       }
+
+      this.logToStore();
     }
+  }
+
+  logToStore() {
+    const logger = {
+      objData: this.objData,
+      score: this.score,
+      clicks: this.clicks,
+      diamondCounter: this.diamondCounter
+    };
+    localStorage.setItem('actions', JSON.stringify(logger));
   }
 
   checkPredictor(node) {

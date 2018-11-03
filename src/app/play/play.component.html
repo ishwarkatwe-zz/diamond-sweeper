@@ -1,5 +1,11 @@
 <h1 class="title">Diamond Sweeper</h1>
 
+<div class="resumer" *ngIf="objStoreData?.objData">
+  Seems like last game is active, Would you like to resume the same ?
+  <button (click)="resume()">Resume</button>
+  <button (click)="reset()">Cancel</button>
+</div>
+
 <section class="game__dashboard">
   <section class="game">
     <div class="game__board" *ngFor="let row of objData; let i = index">
