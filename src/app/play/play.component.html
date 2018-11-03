@@ -1,6 +1,6 @@
 <h1 class="title">Diamond Sweeper</h1>
 
-<div class="resumer" *ngIf="objStoreData?.objData">
+<div class="resumer" *ngIf="objStoreData && objStoreData['objData']">
   Seems like last game is active, Would you like to resume the same ?
   <button (click)="resume()">Resume</button>
   <button (click)="reset()">Cancel</button>
