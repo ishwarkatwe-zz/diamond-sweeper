@@ -97,22 +97,36 @@ export class PlayComponent implements OnInit {
     let yNext = y + 1;
     let yPrev = y - 1;
 
-    if (this.objData[y] && this.objData[y][xNext] && this.objData[y][xNext]['diamond'] == true && this.objData[y][xNext]['clicked'] == false) {
+    if (this.findInNode(y, xNext)) {
       //predictor to right
       node['predictor'] = true;
       node['predictor_direction'] = 'arrow__right';
-    } else if (this.objData[y] && this.objData[y][xPrev] && this.objData[y][xPrev]['diamond'] == true && this.objData[y][xPrev]['clicked'] == false) {
+    } else if (this.findInNode(y, xPrev)) {
       //predictor to left
       node['predictor'] = true;
       node['predictor_direction'] = 'arrow__left';
-    } else if (this.objData[yNext] && this.objData[yNext][x] && this.objData[yNext][x]['diamond'] == true && this.objData[yNext][x]['clicked'] == false) {
+    } else if (this.findInNode(yNext, x)) {
       //predictor to bottom
       node['predictor'] = true;
       node['predictor_direction'] = 'arrow__bottom';
-    } else if (this.objData[yNext] && this.objData[yPrev][x] && this.objData[yPrev][x]['diamond'] == true && this.objData[yPrev][x]['clicked'] == false) {
+    } else if (this.findInNode(yPrev, x)) {
       //predictor to top
       node['predictor'] = true;
       node['predictor_direction'] = 'arrow__top';
+    }
+
+  }
+
+  findInNode(i, j) {
+    if (this.objData[i]
+      && this.objData[i][j]
+      && typeof(this.objData[i][j]['diamond']) !== undefined
+      && typeof(this.objData[i][j]['clicked']) !== undefined
+      && this.objData[i][j]['diamond'] === true
+      && this.objData[i][j]['clicked'] === false) {
+      return true;
+    } else {
+      return false;
     }
   }
 
