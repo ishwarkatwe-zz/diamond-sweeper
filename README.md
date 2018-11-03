@@ -2,10 +2,10 @@
 
 This project represents a game of diamond sweeper
 
-1 . Node 8*8 \n
+1 . Node 8*8 <br>
 2 . Provides hint on nearest nodes with arrows. <br>
-3 . State management with local storage.
-4 . Can you used offline from the benifit of PWA app.
+3 . State management with local storage. <br>
+4 . Can you used offline from the benifit of PWA app. <br>
 
 ## Dependances
 Run `npm install` form the project folder. This is setup all the needful resources to run this project
