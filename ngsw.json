@@ -31,7 +31,11 @@
         "https://ishwarkatwe.github.io/diamond-sweeper/assets/icons/icon-512x512.png",
         "https://ishwarkatwe.github.io/diamond-sweeper/assets/icons/icon-72x72.png",
         "https://ishwarkatwe.github.io/diamond-sweeper/assets/icons/icon-96x96.png",
-        "https://ishwarkatwe.github.io/diamond-sweeper/assets/question.png"
+        "https://ishwarkatwe.github.io/diamond-sweeper/assets/question.png",
+        "https://ishwarkatwe.github.io/diamond-sweeper/assets/snap/desktop.png",
+        "https://ishwarkatwe.github.io/diamond-sweeper/assets/snap/mobile_1.png",
+        "https://ishwarkatwe.github.io/diamond-sweeper/assets/snap/mobile_2.png",
+        "https://ishwarkatwe.github.io/diamond-sweeper/assets/snap/mobile_3.png"
       ],
       "patterns": []
     }
@@ -49,6 +53,10 @@
     "https://ishwarkatwe.github.io/diamond-sweeper/assets/icons/icon-72x72.png": "e4932daaa21ca5974e2de0229b62f42953b2c6b5",
     "https://ishwarkatwe.github.io/diamond-sweeper/assets/icons/icon-96x96.png": "4b7bca00700f878e6509b8075beee86315dd4b8f",
     "https://ishwarkatwe.github.io/diamond-sweeper/assets/question.png": "15098f3bf1f57ee69d08055f6a54597aa200fcb6",
+    "https://ishwarkatwe.github.io/diamond-sweeper/assets/snap/desktop.png": "afc4e7e59cc00605d7f0da710e06ef3e810a5071",
+    "https://ishwarkatwe.github.io/diamond-sweeper/assets/snap/mobile_1.png": "b2fed2e3d37bf220c3ec42d09b6a24650cec45ab",
+    "https://ishwarkatwe.github.io/diamond-sweeper/assets/snap/mobile_2.png": "1ec9e461449866eb525f69ddc9c363a1b33f726d",
+    "https://ishwarkatwe.github.io/diamond-sweeper/assets/snap/mobile_3.png": "13811e01856f459a041a85b2ff5b420d251d99ff",
     "https://ishwarkatwe.github.io/diamond-sweeper/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
     "https://ishwarkatwe.github.io/diamond-sweeper/index.html": "52f44afb4b5cbf8ddcc8bddbf36ea2adfea323b1",
     "https://ishwarkatwe.github.io/diamond-sweeper/main.777f324ac2980c2ccf1d.js": "1835c62481989a8e97062a9e3eda17d978d0c0ab",
